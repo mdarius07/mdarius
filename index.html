@@ -1,15 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darius Molina</title>
-    <link rel="stylesheet" href="styles.css">
+  <title>Darius Molina</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style>
+  body {
+    font: 20px Montserrat, sans-serif;
+    line-height: 1.8;
+    color: #f5f6f7;
+  }
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-1 { 
+    background-color: #ffffff; /* white */
+    color: #ffffff;
+  }
+  .bg-2 { 
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-3 { 
+    background-color: #000000; /* Black */
+    color: #000000;
+  }
+  .bg-4 { 
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+  }
+  .container-fluid {
+    padding-top: 70px;
+    padding-bottom: 70px;
+  }
+  .navbar {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border: 0;
+    border-radius: 0;
+    margin-bottom: 0;
+    font-size: 12px;
+    letter-spacing: 5px;
+  }
+  .navbar-nav  li a:hover {
+    color: #1abc9c !important;
+  }
+  </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Hello, World!</h1>
-        <p>This is a basic webpage example.</p>
+
+<!-- Navbar -->
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+      <a class="navbar-brand" href="#">Darius Molina</a>
     </div>
-</body>
-</html>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="https://github.com/mdarius07">Github</a>
+        <li><a href="https://www.linkedin.com/in/darius-miles-molina/">LinkedIn</a>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- First Container -->
+<div class="container-fluid bg-4 text-center">
+  <h3 class="margin" color: #000000 >Darius Molina</h3>
+  <img src="images/Headshot_E.jpg" class="img-responsive margin" style="display:inline" alt="Me" width="350" height="350">
+  <h3>Cognitive Science B.A</h3>
+</div>
+
+<!-- About Me -->
+<div class="container-fluid bg-1 text-center">
+    <h3 class="margin" style="color:black">About Me</h3>
+    <p style="color:black">Hi! My name is Darius and I'm currently an uprising senior pursuing Cognitive Science at UC Berkeley. Growing up, I was always interested
+        in technology, whether it was video games, new features on my phone, or new products being released. Outside of this, I enjoy spending time with my friends
+        and trying new foods. I am currently looking for any opportunities to gain Software Engineering experience!
+    </p>
+</div>
+
+<!-- Education -->
+<div class="container-fluid bg-1 text-center">
+    <h3 class="margin" style="color:black">Education</h3>
+    <p style="color:black">Relevant Coursework:</p>
+    <ul style="color:#000000;font-size: small;text-align: center;">
+        <li>DATA 8: Foundations of Data Science</li>
+        <li>STAT 20: Introduction to Probability and Statistics</li>
+        <li>CS 61A: Structure and Interpretation of Computer Programs</li>
+        <li>CS 61B: Data Structures & Algorithms</li>
+        <li>CS 169A: Introduction to Software Engineering</li>
+        <li>MATH 54: Linear Algebra & Differential Equations</li>
+        <li>MATH 55: Discrete Mathematics</li>
+    </ul>
+</div>
+
+<!-- Work/Leadership Experience -->
+<div class="container-fluid bg-1 text-center">
+    <h3 class="margin" style="color:black">Work/Leadership Experience</h3>
+    <dl style="color:#000000;font-size: small;">
+        <dt style="font-size: medium;text-align: center;">Pilipinx Association for Scientists, Archtects, and Engineers: Computer Science Intern</dt>
+        <dd style="text-align: left;">- Assembled events that benefit students in terms of Computer Science Literacy and Technicalities.</dd>
+        <dd style="text-align: left;">- Assisted in coordinating FASTERCON, an annual event for Filipinx-American professionals in STEAM while maintaining relations to FASTERCON Education.</dd>
+        <dd style="text-align: left;">- Provided resources to the students in need of Computer Science assistance.</dd>
+    </dl>
+</div>
