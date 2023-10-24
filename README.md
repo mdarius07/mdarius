@@ -1,1 +1,1 @@
-mdarius07.github.io
+mdarius07.github.io/mdarius
