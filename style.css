@@ -1,0 +1,405 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* ------Background------ */
+body {
+  height: 100%;
+  background: rgb(255, 255, 255);
+  background: linear-gradient(
+    180deg,
+    rgb(255, 255, 255) 0%,
+    rgba(0, 168, 255, 1) 100%,
+    rgba(7, 76, 144, 1) 47%
+  );
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: rgb(0, 0, 0);
+  scroll-behavior: smooth;
+}
+
+/* Dark Mode Background */
+body.dark-mode {
+  background: rgb(20, 20, 20);
+  background: linear-gradient(
+    180deg,
+    rgb(20, 20, 20) 0%,
+    rgba(7, 76, 144, 1) 47%,
+    rgba(0, 168, 255, 1) 100%
+  );
+  color: white;
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+/* ------Top Nav Container------ */
+.topnav {
+    overflow: hidden;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 0;
+    position: absolute;
+}
+
+/* Hover Color */
+.topnav a:hover {
+    background-color: #ddddddb3;
+    color: black;
+  }
+  
+  /* Dark Mode Hover Color */
+  body.dark-mode .topnav a:hover {
+    background-color: #555;
+    color: white;
+  }
+
+/* Navbar Links Container */
+.nav-links {
+    display: flex;
+    flex: 1;
+    justify-content: left;
+}
+
+/* Navbar Link Style */
+.nav-links a {
+    color: #000;
+    display: inline-block;
+    padding: 12px 14px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Dark Mode Top Nav Link Style */
+body.dark-mode .topnav a {
+  color: white;
+}
+
+.spacer {
+    flex: 1;
+}
+
+/* Toggle Switch Styles */
+.toggle-switch {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.toggle-switch input {
+  display: none;
+}
+
+.toggle-switch label {
+  cursor: pointer;
+  width: 50px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 50px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.toggle-switch .slider {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background-color: white;
+  transition: transform 0.3s;
+  transform: translateX(2px);
+}
+
+.toggle-switch input:checked + label {
+  background-color: #4caf50;
+}
+
+.toggle-switch input:checked + label .slider {
+  transform: translateX(24px);
+}
+
+#toggle-text {
+  margin-left: 10px;
+  font-size: 16px;
+}
+
+/* Dark Mode Toggle Text */
+body.dark-mode #toggle-text {
+  content: "Light";
+}
+
+/* Animated Text */
+.animated-text {
+  font-size: 50px;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.20em solid rgb(0, 0, 0); /* Adjust the cursor style */
+  width: 23ch; /* Adjust to fit the text length */
+  animation: typing 4s steps(23), blink-caret 0.75s step-end infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 24ch;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: rgb(0, 0, 0);
+  }
+}
+
+/* Section Styling */
+.section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 80px 20px 20px 20px; /* Adjusted padding to account for fixed navbar */
+}
+
+/* ------Home Section Styling------ */
+#home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+/* Container for Centering */
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%; /* Adjust to fit the new height of the home section */
+    width: 100%;
+    padding-top: 20px; /* Adjust to align content within the shorter section */
+}
+
+/* ------About Section Styling------ */
+.about-content {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    text-align: left;
+    padding: 20px;
+  }
+  
+  /* About Image Styling */
+  .about-image img {
+    width: 500px; /* Set the width of the image */
+    height: 600px; /* Set the height of the image */
+    object-fit: cover; /* Ensure the image covers the square dimensions */
+    margin-right: 20px;
+    align-items: left;
+  }
+  
+  /* About Text */
+  .about-text {
+    align-items: right;
+    flex: 1;
+  }
+  
+  @media (max-width: 768px) {
+    .about-content {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .about-image {
+      margin-bottom: 20px;
+    }
+  
+    .about-text {
+      text-align: center;
+      font-size: 18pt;
+    }
+  }
+
+  .social-links {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-links a {
+    color: #0077b5; /* LinkedIn blue for text */
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.social-links a i {
+    margin-right: 10px;
+    font-size: 32px;
+}
+
+.social-links a:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color: #0077b5; /* LinkedIn blue for background on hover */
+}
+
+.social-links a i.fa-github {
+    color: #333; /* GitHub icon color */
+}
+
+.social-links a i.fa-linkedin {
+    color: #0077b5; /* LinkedIn icon color */
+}
+
+.social-links a i.fa-envelope {
+    color: #d14836; /* Email icon color */
+}
+
+/* ------Resume Styling------- */
+.resume-container {
+    position: relative;
+    width: 100%;
+    max-width: 1200px; /* Adjust as needed */
+    margin: 0 auto 120px auto;
+    text-align: center;
+}
+
+.resume-viewer {
+    width: 100%;
+    height: 80vh; /* Adjust height as needed */
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.download-link {
+    display: block;
+    margin-top: 20px;
+    font-size: 18px;
+    color: #000;
+    text-decoration: none;
+    background-color: #f2f2f2;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.download-link:hover {
+    background-color: #ddd;
+}
+
+/* Dark Mode Styles */
+body.dark-mode .download-link {
+    color: #fff;
+    background-color: #333;
+    border: 1px solid #555;
+}
+
+body.dark-mode .download-link:hover {
+    background-color: #555;
+}
+
+
+
+/* ------Extra Styling (Slideshow)------ */
+* {box-sizing: border-box}
+
+/* Slideshow Container */
+.slideshow-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+    align-items: center;
+}
+
+/* Hide images by default */
+.mySlides {
+    display: none;
+}
+  
+/* Caption text */
+.text {
+    margin-top: 70px;
+    color: #f2f2f2;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    text-shadow: 
+        -1px -1px 0 #000,  
+         1px -1px 0 #000,
+        -1px  1px 0 #000,
+         1px  1px 0 #000;
+}
+
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/* ------Project Styling------ */
+.tile-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.tile {
+    flex: 1 0 300px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.tile:hover {
+    transform: scale(1.05);
+}
+
+footer {
+    text-align: center;
+    margin-top: 100px;
+    padding: 10px;
+    color: black;
+}
+
+footer.darkmode {
+    color: white;
+}
